@@ -31,7 +31,8 @@ def shutdown():
     if exists('./build/default/binding.node'):
       symlink('./build/default/binding.node', './binding.node')
     elif exists('./build/Release/binding.node'):
-      symlink('./build/Release/binding.node', './binding.node')
+      console.log('make the symlink: ./build/Release/binding.node ./binding.node');
+      // symlink('./build/Release/binding.node', './binding.node')
     else:
       raise Exception("Cannot locate build binding.node")
 
